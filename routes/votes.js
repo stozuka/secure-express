@@ -1,8 +1,9 @@
-var express = require('express');
-var router = express.Router();
+'use strict';
 
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+const express = require('express');
+const router = express.Router();
+const {votes} = require('../controllers/votes');
+
+router.get('/', votes);
 
 module.exports = router;
