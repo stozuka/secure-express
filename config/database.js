@@ -2,21 +2,21 @@
 
 module.exports = {
   development: {
-    username: 'root',
+    username: 'stozuka',
     password: null,
     database: 'vote',
     host: '127.0.0.1',
     dialect: 'postgres'
   },
   test: {
-    username: 'root',
+    username: 'stozuka',
     password: null,
     database: 'vote',
     host: '127.0.0.1',
     dialect: 'postgres'
   },
   production: {
-    username: 'root',
+    username: 'stozuka',
     password: null,
     database: 'vote',
     host: '127.0.0.1',
