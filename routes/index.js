@@ -2,9 +2,8 @@
 
 const express = require('express');
 const router = express.Router();
+const {votes} = require('../controllers');
 
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+router.get('/', votes);
 
 module.exports = router;
