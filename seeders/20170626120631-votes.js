@@ -1,7 +1,5 @@
 'use strict';
 
-const models = require('../models');
-
 module.exports = {
   up: function (queryInterface, Sequelize) {
     return queryInterface.bulkInsert(

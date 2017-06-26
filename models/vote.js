@@ -14,12 +14,15 @@ module.exports = function(sequelize, DataTypes) {
     createdAt: {
       allowNull: false,
       type: DataTypes.DATE,
+      field: 'created_at',
     },
     updatedAt: {
       allowNull: false,
       type: DataTypes.DATE,
+      field: 'updated_at',
     }
   }, {
+    tableName: 'votes',
     classMethods: {
       associate: function(models) {
         // associations can be defined here

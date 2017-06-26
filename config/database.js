@@ -6,20 +6,29 @@ module.exports = {
     password: null,
     database: 'vote',
     host: '127.0.0.1',
-    dialect: 'postgres'
+    dialect: 'postgres',
+    define: {
+      underscored: true
+    },
   },
   test: {
     username: 'stozuka',
     password: null,
     database: 'vote',
     host: '127.0.0.1',
-    dialect: 'postgres'
+    dialect: 'postgres',
+    define: {
+      underscored: true
+    },
   },
   production: {
     username: 'stozuka',
     password: null,
     database: 'vote',
     host: '127.0.0.1',
-    dialect: 'postgres'
+    dialect: 'postgres',
+    define: {
+      underscored: true
+    },
   }
 }

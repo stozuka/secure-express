@@ -2,8 +2,8 @@
 
 const express = require('express');
 const router = express.Router();
-const {votes} = require('../controllers');
+const {getTopPage} = require('../controllers');
 
-router.get('/', votes);
+router.get('/', getTopPage);
 
 module.exports = router;
