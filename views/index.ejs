@@ -11,24 +11,19 @@
   <body>
     <div class="container">
       <h1>Votes</h1>
+
       <div class="row">
-        <div class="col-md-6">
-          <p>first item</p>
-          <div class="count">
-            100
+        <% data.forEach(e => { %>
+          <div class="col-md-6">
+            <p><%= e.id %>. <%= e.item %></p>
+            <div class="count">
+              <p><%= e.votes %></p>
+            </div>
+            <button type="button" name="button" class="vote btn btn-primary btn-lg">Vote</button>
           </div>
-          <button type="button" name="button" class="vote btn btn-primary btn-lg">Vote</button>
-        </div>
-        <div class="col-md-6">
-          <p>second item</p>
-          <div class="count">
-            150
-          </div>
-          <button type="button" name="button" class="vote btn btn-primary btn-lg">Vote</button>
-        </div>
+        <% }) %>
       </div>
-      <div><%= data[0].id %></div>
-      <div><%= data[0].item %></div>
+
     </div>
 
     <!-- Latest compiled and minified JavaScript -->
