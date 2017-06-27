@@ -1,6 +1,7 @@
 'use strict';
 
 const _ = require('lodash');
+const moment = require('moment');
 
 module.exports = function(sequelize, DataTypes) {
   const Vote = sequelize.define('Vote', {
@@ -21,11 +22,17 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       type: DataTypes.DATE,
       field: 'created_at',
+      get() {
+        return moment(this.getDataValue('createdAt')).format('Y-MM-DD HH:mm:ss');
+      },
     },
     updatedAt: {
       allowNull: false,
       type: DataTypes.DATE,
       field: 'updated_at',
+      get() {
+        return moment(this.getDataValue('updatedAt')).format('Y-MM-DD HH:mm:ss');
+      },
     }
   }, {
     tableName: 'votes',
