@@ -1,5 +1,7 @@
 'use strict';
 
+const _ = require('lodash');
+
 module.exports = function(sequelize, DataTypes) {
   const Vote = sequelize.define('Vote', {
     id: {
@@ -23,6 +25,7 @@ module.exports = function(sequelize, DataTypes) {
     }
   }, {
     tableName: 'votes',
+    timestamps: true,
     classMethods: {
       associate: function(models) {
         // associations can be defined here
@@ -30,7 +33,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     instanceMethods: {
       toJSON: function () {
-        return this.get();
+        return _.omit(this.get(), ['created_at', 'updated_at']);
       }
     },
   });

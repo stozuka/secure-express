@@ -2,33 +2,33 @@
 
 module.exports = {
   development: {
-    username: 'stozuka',
+    username: 'sendbest',
     password: null,
     database: 'vote',
     host: '127.0.0.1',
     dialect: 'postgres',
     define: {
-      underscored: true
+      underscored: true,
     },
   },
   test: {
-    username: 'stozuka',
+    username: 'sendbest',
     password: null,
     database: 'vote',
     host: '127.0.0.1',
     dialect: 'postgres',
     define: {
-      underscored: true
+      underscored: true,
     },
   },
   production: {
-    username: 'stozuka',
+    username: 'sendbest',
     password: null,
     database: 'vote',
     host: '127.0.0.1',
     dialect: 'postgres',
     define: {
-      underscored: true
+      underscored: true,
     },
   }
 }
