@@ -37,16 +37,19 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     tableName: 'votes',
     timestamps: true,
+    defaultScope: {
+      attributes: {exclude: ['created_at', 'updated_at']},
+    },
   });
 
   // Class Methods
-  Model.associate = function (models) {
-    return;
-  };
+  // Model.associate = function (models) {
+  //   ;
+  // };
 
   // Instance Methods
   Model.prototype.toJSON = function () {
-    return _.omit(this.get(), ['created_at', 'updated_at']);
+    return this.get();
   };
 
   return Model;
