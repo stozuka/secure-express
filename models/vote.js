@@ -4,7 +4,7 @@ const _ = require('lodash');
 const moment = require('moment');
 
 module.exports = function(sequelize, DataTypes) {
-  const Vote = sequelize.define('Vote', {
+  const Model = sequelize.define('Vote', {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -37,16 +37,17 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     tableName: 'votes',
     timestamps: true,
-    classMethods: {
-      associate: function(models) {
-        // associations can be defined here
-      }
-    },
-    instanceMethods: {
-      toJSON: function () {
-        return _.omit(this.get(), ['created_at', 'updated_at']);
-      }
-    },
   });
-  return Vote;
+
+  // Class Methods
+  Model.associate = function (models) {
+    return;
+  };
+
+  // Instance Methods
+  Model.prototype.toJSON = function () {
+    return _.omit(this.get(), ['created_at', 'updated_at']);
+  };
+
+  return Model;
 };
