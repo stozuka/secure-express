@@ -4,7 +4,7 @@ const _ = require('lodash');
 const models = require('../models');
 const debug = require('debug')('secure-express:server');
 
-async function getTopPage(req, res, next) {
+async function index(req, res, next) {
   try {
     const votes = await models.Vote.findAll();
     let data = votes.map(vote => vote.toJSON());
@@ -17,5 +17,5 @@ async function getTopPage(req, res, next) {
 }
 
 module.exports = {
-  getTopPage,
+  index,
 }

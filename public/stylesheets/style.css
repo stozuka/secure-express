@@ -1,21 +1,33 @@
 body {
     padding: 50px;
-    font: 24px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font: 28px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-    color: #00B7FF;
-}
-
-.container h1 {
-    text-align: center;
-    margin-bottom: 48px;
-}
-
-.row {
+.container {
     text-align: center;
 }
 
-.vote {
-    margin: 20px;
+#title {
+    margin-bottom: 50px;
+}
+
+#items {
+    margin-bottom: 120px;
+}
+
+.item-name {
+    margin: 18px 18px;
+}
+
+.item-count {
+    margin: 18px 18px;
+}
+
+.item-vote {
+    width: 100px;
+}
+
+.edit-reset {
+    margin: 0 28px;
+    width: 120px;
 }
