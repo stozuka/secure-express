@@ -1,11 +1,11 @@
 {
-  "name": "secure-express",
+  "name": "simple-vote",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www",
-    "dev": "DEBUG=secure-express:* NODE_ENV=development npm start",
-    "prod": "DEBUG=secure-express:* NODE_ENV=production npm start"
+    "dev": "DEBUG=simple-vote:* NODE_ENV=development npm start",
+    "prod": "NODE_ENV=production npm start"
   },
   "dependencies": {
     "body-parser": "^1.17.2",
