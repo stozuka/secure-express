@@ -4,14 +4,9 @@ const models = require('../../models');
 
 async function resetVotes(req, res, next) {
   try {
-    await models.Vote.update(
-      { votes: 0 },
-      {
-        where: {
-          votes: { $not: 0 }
-        }
-      }
-    );
+    const values = { votes: 0 };
+    const options = { where: { votes: { $not: 0 } } };
+    await models.Vote.update(values, options);
     res.status(200).json({ message: 'Success' });
   } catch (e) {
     next(e);
