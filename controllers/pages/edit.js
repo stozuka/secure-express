@@ -1,21 +1,19 @@
 'use strict';
 
+const models = require('../../models');
 const _ = require('lodash');
-const models = require('../models');
-const debug = require('debug')('secure-express:server');
 
-async function index(req, res, next) {
+async function edit(req, res, next) {
   try {
     const votes = await models.Vote.findAll();
     let data = votes.map(vote => vote.toJSON());
     data = _.orderBy(data, 'id');
-    debug(data);
-    res.render('index', {data});
+    res.render('edit', { data });
   } catch (e) {
     next(e);
   }
 }
 
 module.exports = {
-  index,
-}
+  edit,
+};

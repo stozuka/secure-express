@@ -1,0 +1,28 @@
+<%- include('../partials/header') %>
+
+  <div class="container">
+    <div id="title" class="row">
+      <h1>Edit Items</h1>
+    </div>
+
+    <div id="items" class="row">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div id="items" class="form-group form-inline">
+          <% data.forEach(e => { %>
+            <div class="col-md-4">
+              <p class="item-name" id="item-<%= e.id %>">
+                <%= e.item %>
+              </p>
+              <input type="text" class="form-control" id="edit-item-<%= e.id %>" value="<%= e.item %>">
+            </div>
+            <% }) %>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+      <button type="button" id="submit-edit-items" class="btn btn-primary">Submit</button>
+      <button type="button" id="cancel-edit-items" class="btn btn-info">Cancel</button>
+    </div>
+  </div>
+
+  <%- include('../partials/footer') %>

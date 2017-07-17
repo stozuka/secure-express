@@ -16,11 +16,11 @@ body {
 }
 
 .item-name {
-    margin: 18px 18px;
+    margin: 18px 12px;
 }
 
 .item-count {
-    margin: 18px 18px;
+    margin: 18px 12px;
 }
 
 .item-vote {
@@ -29,5 +29,20 @@ body {
 
 .edit-reset {
     margin: 0 28px;
+    width: 120px;
+}
+
+.edit-item {
+    margin: 0 28px;
+    width: 120px;
+}
+
+#submit-edit-items {
+    margin: 100px 28px;
+    width: 120px;
+}
+
+#cancel-edit-items {
+    margin: 100px 28px;
     width: 120px;
 }

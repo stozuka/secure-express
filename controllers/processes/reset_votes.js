@@ -1,8 +1,8 @@
 'use strict';
 
-const models = require('../models');
+const models = require('../../models');
 
-async function reset(req, res, next) {
+async function resetVotes(req, res, next) {
   try {
     await models.Vote.update(
       { votes: 0 },
@@ -12,12 +12,12 @@ async function reset(req, res, next) {
         }
       }
     );
-    res.status(200).json({ message: 'reset' });
+    res.status(200).json({ message: 'Success' });
   } catch (e) {
     next(e);
   }
 }
 
 module.exports = {
-  reset,
+  resetVotes,
 };
