@@ -25,7 +25,7 @@ module.exports = {
     username: 'sendbest',
     password: null,
     database: 'vote',
-    host: '127.0.0.1',
+    host: 'postgresql-test.cumjeelzucrn.us-west-2.rds.amazonaws.com',
     dialect: 'postgres',
     define: {
       underscored: true,
