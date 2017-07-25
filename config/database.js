@@ -1,12 +1,14 @@
 'use strict';
 
+const env = require('env');
+
 module.exports = {
   development: {
-    username: 'sendbest',
-    password: null,
-    database: 'vote',
-    host: '127.0.0.1',
-    dialect: 'postgres',
+    username: env.development.username,
+    password: env.development.password,
+    database: env.development.database,
+    host: env.development.host,
+    dialect: env.development.dialect,
     define: {
       underscored: true,
     },
@@ -22,11 +24,11 @@ module.exports = {
     },
   },
   production: {
-    username: 'sendbest',
-    password: null,
-    database: 'vote',
-    host: 'postgresql-test.cumjeelzucrn.us-west-2.rds.amazonaws.com',
-    dialect: 'postgres',
+    username: env.production.username,
+    password: env.production.password,
+    database: env.production.database,
+    host: env.production.host,
+    dialect: env.production.dialect,
     define: {
       underscored: true,
     },
