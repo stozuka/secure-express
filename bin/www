@@ -7,20 +7,26 @@
 
 const  app = require('../app');
 const debug = require('debug')('simple-vote:server');
-const http = require('http');
+const https = require('https');
+const fs = require('fs');
+const path = require('path');
 
 /**
  * Get port from environment and store in Express.
  */
 
-const port = normalizePort(process.env.PORT || '3000');
+const port = normalizePort(process.env.PORT || '8443');
 app.set('port', port);
 
 /**
- * Create HTTP server.
+ * Create HTTPS server.
  */
+const options = {
+  key: fs.readFileSync(path.join(__dirname, '../config/https/key.pem')),
+  cert: fs.readFileSync(path.join(__dirname, '../config/https/certificate.pem'))
+};
 
-var server = http.createServer(app);
+var server = https.createServer(options, app);
 
 /**
  * Listen on provided port, on all network interfaces.
