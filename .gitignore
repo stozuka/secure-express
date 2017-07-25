@@ -1,5 +1,6 @@
-# env
+# config
 config/env.js
+config/https
 
 # vscode
 .vscode
