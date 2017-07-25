@@ -1,6 +1,6 @@
 'use strict';
 
-const env = require('env');
+const env = require('./env');
 
 module.exports = {
   development: {
